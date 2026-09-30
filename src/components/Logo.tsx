@@ -54,7 +54,7 @@ const LogoCanvas = () => {
 
     const handleResize = () => {
       if (window.innerWidth < 768) {
-        setScale([2.5, 2.5, 2.5]);
+        setScale([3, 3, 3]);
         setPosition([0, -0.5, 0]);
       } else if (window.innerWidth < 1024) {
         setScale([3.2, 3.2, 3.2]);
@@ -88,7 +88,7 @@ const LogoCanvas = () => {
         enableZoom={false} // 禁止滾輪縮放
         enablePan={false} // 禁止平移
         autoRotate={true} // 啟用自動緩慢旋轉
-        autoRotateSpeed={1.3} // 自動旋轉速度
+        autoRotateSpeed={1.7} // 自動旋轉速度
       />
 
       <Suspense fallback={null}>
