@@ -1,0 +1,93 @@
+import React from "react";
+
+const Skills = () => {
+  const experiences = [
+    { year: "2026", title: "網頁設計實習生 - 香柏樹團購事業" },
+    { year: "2022 - 2026", title: "明新科技大學 多媒體與遊戲發展系" },
+  ];
+
+  // 將技能分類為 3D / Design 與 Dev / Interactive
+  const skillCategories = [
+    {
+      title: "3D & Design",
+      items: [
+        "Blender",
+        "Substance 3D Painter",
+        "Photoshop",
+        "Illustrator",
+        "Kdenlive",
+      ],
+    },
+    {
+      title: "Development",
+      items: ["React / R3F", "TypeScript", "Tailwind CSS", "GSAP"],
+    },
+  ];
+
+  return (
+    <section className="flex flex-col lg:flex-row justify-between items-center p-6 sm:p-10 gap-10 text-neutral-900 max-w-7xl mx-auto min-h-screen">
+      {/* 左側：Experience & Skills 資訊 */}
+      <div className="w-full lg:w-1/2 flex flex-col justify-center">
+        {/* 上半部：Experience */}
+        <div className="mb-6">
+          <h2 className="text-3xl sm:text-4xl font-semibold mb-4 text-neutral-900">
+            Experience
+          </h2>
+          <div className="space-y-3">
+            {experiences.map((exp, index) => (
+              <div
+                key={index}
+                className="bg-neutral-200/60 p-3.5 rounded-lg flex justify-between items-center text-sm sm:text-base text-neutral-700 font-medium"
+              >
+                <span>{exp.title}</span>
+                <span className="text-neutral-500 text-xs sm:text-sm font-mono ml-2">
+                  {exp.year}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* 分隔線 */}
+        <hr className="border-neutral-300 my-4" />
+
+        {/* 下半部：Skill（分成兩大類別） */}
+        <div>
+          <h3 className="text-2xl sm:text-3xl font-semibold mb-4 text-neutral-900">
+            Skill
+          </h3>
+          <div className="grid grid-cols-2 gap-4">
+            {skillCategories.map((cat, catIdx) => (
+              <div key={catIdx} className="flex flex-col">
+                <span className="text-xs font-semibold text-neutral-400 uppercase tracking-wider mb-2">
+                  {cat.title}
+                </span>
+                <div className="flex flex-col gap-2">
+                  {cat.items.map((item, itemIdx) => (
+                    <div
+                      key={itemIdx}
+                      className="bg-neutral-200/60 p-2.5 rounded-lg text-center text-xs sm:text-sm font-medium text-neutral-800"
+                    >
+                      {item}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* 右側：大型圓形 3D 視覺區 */}
+      <div className="w-full lg:w-1/2 flex justify-center items-center">
+        <div className="w-64 h-64 sm:w-80 sm:h-80 lg:w-[420px] lg:h-[420px] bg-neutral-300 rounded-full flex items-center justify-center relative shadow-inner overflow-hidden">
+          <span className="text-neutral-500 font-medium text-lg">
+            3D Canvas / Visual
+          </span>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Skills;
