@@ -63,6 +63,7 @@ const LogoCanvas = ({
     <Canvas
       className={className}
       camera={{ near: 0.1, far: 1000, position: [0, 0, 5] }}
+      style={{ pointerEvents: "none" }}
     >
       <ambientLight intensity={5} />
       <directionalLight position={[10, 10, 5]} intensity={2} />
