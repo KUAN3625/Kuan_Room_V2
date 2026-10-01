@@ -3,7 +3,10 @@ import LogoCanvas from "./Logo";
 
 const Hero = () => {
   return (
-    <section className="flex flex-col lg:flex-row justify-between items-center p-6 sm:p-10 gap-10 text-neutral-900 max-w-7xl mx-auto">
+    <section
+      id="hero"
+      className="flex flex-col lg:flex-row justify-between items-center p-6 sm:p-10 gap-10 text-neutral-900 max-w-7xl mx-auto"
+    >
       {/* 左側：個人簡介 */}
       <div className="w-full lg:w-1/3 text-center lg:text-left">
         <p className="text-3xl sm:text-4xl mb-3 text-neutral-500 font-light">
@@ -22,7 +25,11 @@ const Hero = () => {
 
       {/* 中間：3D 畫布 */}
       <div className="w-full lg:w-1/3 h-64 sm:h-80 lg:h-96 flex justify-center items-center my-6 lg:my-0 relative">
-        <LogoCanvas />
+        <LogoCanvas
+          className="w-full h-full"
+          scale={[3.5, 3.5, 3.5]}
+          position={[0, -0.5, 0]}
+        />
       </div>
 
       {/* 右側：About Me & 社群連結 */}

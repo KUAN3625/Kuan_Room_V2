@@ -1,4 +1,5 @@
-import React from "react";
+import LogoCanvas from "./Logo";
+import WrenchMode from "../assets/3d/Wrench.glb";
 
 const Skills = () => {
   const experiences = [
@@ -20,12 +21,15 @@ const Skills = () => {
     },
     {
       title: "Development",
-      items: ["React / R3F", "TypeScript", "Tailwind CSS", "GSAP"],
+      items: ["React / R3F", "TypeScript", "Three.js", "Wordpress"],
     },
   ];
 
   return (
-    <section className="flex flex-col lg:flex-row justify-between items-center p-6 sm:p-10 gap-10 text-neutral-900 max-w-7xl mx-auto min-h-screen">
+    <section
+      id="skills"
+      className="flex flex-col lg:flex-row justify-between items-center p-6 sm:p-10 gap-10 text-neutral-900 max-w-7xl mx-auto min-h-screen"
+    >
       {/* 左側：Experience & Skills 資訊 */}
       <div className="w-full lg:w-1/2 flex flex-col justify-center">
         {/* 上半部：Experience */}
@@ -80,10 +84,15 @@ const Skills = () => {
 
       {/* 右側：大型圓形 3D 視覺區 */}
       <div className="w-full lg:w-1/2 flex justify-center items-center">
-        <div className="w-64 h-64 sm:w-80 sm:h-80 lg:w-[420px] lg:h-[420px] bg-neutral-300 rounded-full flex items-center justify-center relative shadow-inner overflow-hidden">
-          <span className="text-neutral-500 font-medium text-lg">
-            3D Canvas / Visual
-          </span>
+        <div className="w-full lg:w-1/2 flex justify-center items-center">
+          <div className="w-64 h-64 sm:w-80 sm:h-80 lg:w-[420px] lg:h-[420px] rounded-full relative overflow-hidden shadow-inner flex justify-center items-center">
+            <LogoCanvas
+              modelPath={WrenchMode}
+              className="w-full h-full"
+              scale={[3, 3, 3]}
+              position={[0, -0.2, 0]}
+            />
+          </div>
         </div>
       </div>
     </section>
