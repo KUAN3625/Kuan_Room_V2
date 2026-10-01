@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { BsArrowLeft, BsX } from "react-icons/bs";
+import { BsArrowLeft } from "react-icons/bs";
 
 interface GreenProps {
   onBack: () => void;
@@ -126,7 +126,7 @@ const Green: React.FC<GreenProps> = ({ onBack }) => {
         ))}
 
         {/* 4. 最底層的大圖 */}
-        <div className="rounded-2xl overflow-hidden mt-16  ">
+        <div className="rounded-2xl overflow-hidden mt-16">
           <img
             src={project.bottomLargeImg}
             alt={`${project.title} Large Banner`}
