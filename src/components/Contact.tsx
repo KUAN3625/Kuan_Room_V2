@@ -2,7 +2,6 @@ import { useState } from "react";
 
 const Contact: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>("網頁");
-  const [currentLogo, setCurrentLogo] = useState<number>(1);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
