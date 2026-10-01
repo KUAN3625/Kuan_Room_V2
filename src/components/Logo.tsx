@@ -57,7 +57,7 @@ const LogoCanvas = ({
   scale = [2.5, 2.5, 2.5],
   position = [0, 0, 0],
   className = "w-full h-full",
-  autoRotateSpeed = 1.7,
+  // autoRotateSpeed = 1.7,
 }: LogoCanvasProps) => {
   return (
     <Canvas
@@ -66,12 +66,12 @@ const LogoCanvas = ({
     >
       <ambientLight intensity={5} />
       <directionalLight position={[10, 10, 5]} intensity={2} />
-      <OrbitControls
+      {/* <OrbitControls
         enableZoom={false}
         enablePan={false}
         autoRotate={true}
         autoRotateSpeed={autoRotateSpeed}
-      />
+      /> */}
 
       <Suspense fallback={null}>
         <Logo modelPath={modelPath} scale={scale} position={position} />
