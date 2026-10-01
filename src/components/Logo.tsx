@@ -1,4 +1,5 @@
-import { OrbitControls, useAnimations, useGLTF } from "@react-three/drei";
+// OrbitControls暫時移除
+import { useAnimations, useGLTF } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { Suspense, useEffect, useMemo, useRef } from "react";
 import LogoMode from "../assets/3d/Logo.glb";
