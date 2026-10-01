@@ -1,11 +1,12 @@
 import "./App.css";
-import About from "./components/About";
+// import About from "./components/About";
 import Contact from "./components/Contact";
 import Skills from "./components/Skil";
 import Hero from "./components/Hero";
 import Loading from "./components/Loading";
 import Portfolio from "./components/Portfolio";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -16,8 +17,9 @@ function App() {
         <Hero />
         <Skills />
         <Portfolio />
-        <About />
+        {/* <About /> */}
         <Contact />
+        <Footer />
       </div>
     </>
   );

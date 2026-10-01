@@ -1,47 +1,33 @@
 import { useState } from "react";
 import { BsArrowLeft } from "react-icons/bs";
 
-interface GreenProps {
+interface FoxProps {
   onBack: () => void;
 }
 
-const Green: React.FC<GreenProps> = ({ onBack }) => {
-  // 🌟 控制滿屏檢視的圖片路徑
+const Fox: React.FC<FoxProps> = ({ onBack }) => {
   const [activeImg, setActiveImg] = useState<string | null>(null);
 
   const project = {
-    title: "Green",
-    date: "2025.09 ~ ",
-    img: "/portfolio_img/Green/Green_9.jpeg",
+    title: "狐",
+    date: "2026.06 ~ 2026.07",
+    img: "/portfolio_img/Lantern_Festival/Lantern Festival_1.jpeg",
     tags: ["Blender", "Substance Painter", "Potoshop"],
-    description:
-      "以吉祥物為主題的 3D 場景創作，著重於場景渲染與後製氛圍的烘托。",
+    description: "以日本祭典風格為主的3D建模練習。",
     sections: [
       {
         id: 1,
         text: "介紹文字",
         images: [
-          "/portfolio_img/Green/Green_8.jpeg",
-          "/portfolio_img/Green/Green_8-1.jpeg",
-          "/portfolio_img/Green/Green_5.jpeg",
-          "/portfolio_img/Green/Green_5-1.jpeg",
-        ],
-      },
-      {
-        id: 2,
-        // text: "介紹文字介紹文字介紹文字介紹文字介\n紹文字介紹文字介紹文字介紹文字",
-        images: [
-          //   "/portfolio_img/Green/Green_4.jpeg",
-          "/portfolio_img/Green/Green_11.jpeg",
-          "/portfolio_img/Green/Green_3.jpeg",
-          "/portfolio_img/Green/Green_7.jpeg",
-          "/portfolio_img/Green/Green_6.jpeg",
-          //   "/portfolio_img/Green/Green.jpeg",
+          "/portfolio_img/Lantern_Festival/Lantern Festival_1.jpeg",
+          "/portfolio_img/Lantern_Festival/Lantern Festival_2.jpeg",
+          "/portfolio_img/Lantern_Festival/Lantern Festival_3.jpeg",
+          
         ],
       },
     ],
 
-    bottomLargeImg: "/portfolio_img/Green/Green_9.jpeg",
+    bottomLargeImg: "/portfolio_img/Lantern_Festival/Lantern Festival_4.jpeg",
   };
 
   return (
@@ -166,4 +152,4 @@ const Green: React.FC<GreenProps> = ({ onBack }) => {
   );
 };
 
-export default Green;
+export default Fox;

@@ -26,7 +26,7 @@ const Loading = () => {
   if (!active && progress === 100) return null;
 
   return (
-    <div className="fixed inset-0 bg-neutral-200 z-[9999] flex flex-col items-center justify-center transition-opacity duration-500">
+    <div className="fixed inset-0 bg-neutral-200 z-99 flex flex-col items-center justify-center transition-opacity duration-500">
       {/* 背景裝飾微波紋 */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-neutral-300/40 rounded-full blur-[120px] -z-10 animate-pulse"></div>
 

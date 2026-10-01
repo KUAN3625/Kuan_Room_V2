@@ -2,10 +2,16 @@ import { BsTwitterX, BsInstagram, BsGithub } from "react-icons/bs";
 import LogoCanvas from "./Logo";
 
 const Hero = () => {
+  const scrollToPortfolio = () => {
+    const portfolioSection = document.getElementById("portfolio");
+    if (portfolioSection) {
+      portfolioSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <section
       id="hero"
-      className="flex flex-col lg:flex-row justify-between items-center p-6 sm:p-10 gap-10 text-neutral-900 max-w-7xl mx-auto"
+      className="flex flex-col lg:flex-row justify-between items-center p-6 sm:p-10 gap-10 text-neutral-900 max-w-7xl mx-auto scroll-mt-20"
     >
       {/* 左側：個人簡介 */}
       <div className="w-full lg:w-1/3 text-center lg:text-left">
@@ -42,7 +48,10 @@ const Hero = () => {
           <br />
           跨領域工作者。
         </p>
-        <button className="bg-neutral-900 text-white px-8 py-2.5 rounded-full font-medium cursor-pointer transition-all hover:bg-neutral-800 mb-6 shadow-sm">
+        <button
+          className="bg-neutral-900 text-white px-8 py-2.5 rounded-full font-medium cursor-pointer transition-all hover:bg-neutral-800 mb-6 shadow-sm"
+          onClick={scrollToPortfolio}
+        >
           Show More...
         </button>
         <div className="flex space-x-3 cursor-pointer">

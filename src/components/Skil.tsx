@@ -3,8 +3,10 @@ import WrenchMode from "../assets/3d/Wrench.glb";
 
 const Skills = () => {
   const experiences = [
-    { year: "2026", title: "網頁設計實習生 - 香柏樹團購事業" },
-    { year: "2022 - 2026", title: "明新科技大學 多媒體與遊戲發展系" },
+    { year: "2026", title: "OOOO" },
+    { year: "2022 - 2026", title: "OOOO" },
+    //  { year: "2026", title: "網頁設計實習生 - 香柏樹團購事業" },
+    // { year: "2022 - 2026", title: "明新科技大學 多媒體與遊戲發展系" },
   ];
 
   // 將技能分類為 3D / Design 與 Dev / Interactive
@@ -28,12 +30,12 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="flex flex-col lg:flex-row justify-between items-center p-6 sm:p-10 gap-10 text-neutral-900 max-w-7xl mx-auto min-h-screen"
+      className="flex flex-col lg:flex-row justify-between items-center px-6 py-10 sm:px-10 gap-8 text-neutral-900 max-w-6xl mx-auto scroll-mt-20"
     >
       {/* 左側：Experience & Skills 資訊 */}
       <div className="w-full lg:w-1/2 flex flex-col justify-center">
         {/* 上半部：Experience */}
-        <div className="mb-6">
+        <div className="mb-3">
           <h2 className="text-3xl sm:text-4xl font-semibold mb-4 text-neutral-900">
             Experience
           </h2>
@@ -82,17 +84,15 @@ const Skills = () => {
         </div>
       </div>
 
-      {/* 右側：大型圓形 3D 視覺區 */}
+      {/* 右側：3D 視覺區 */}
       <div className="w-full lg:w-1/2 flex justify-center items-center">
-        <div className="w-full lg:w-1/2 flex justify-center items-center">
-          <div className="w-64 h-64 sm:w-80 sm:h-80 lg:w-[420px] lg:h-[420px] rounded-full relative overflow-hidden shadow-inner flex justify-center items-center">
-            <LogoCanvas
-              modelPath={WrenchMode}
-              className="w-full h-full"
-              scale={[3, 3, 3]}
-              position={[0, -0.2, 0]}
-            />
-          </div>
+        <div className="w-56 h-56 sm:w-72 sm:h-72 lg:w-80 lg:h-80 rounded-full relative overflow-hidden shadow-inner flex justify-center items-center bg-neutral-200/40">
+          <LogoCanvas
+            modelPath={WrenchMode}
+            className="w-full h-full"
+            scale={[3, 3, 3]}
+            position={[0, -0.2, 0]}
+          />
         </div>
       </div>
     </section>
