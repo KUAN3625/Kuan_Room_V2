@@ -45,7 +45,7 @@ const Loading = () => {
         <div className="mb-12 relative flex flex-col items-center">
           <div className="relative w-28 h-28 mb-6">
             <img
-              src="img/LOGO01.webp"
+              src="img/LOGO.png"
               alt="Loading Logo"
               className="w-full h-full object-contain opacity-80"
             />

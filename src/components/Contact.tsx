@@ -18,7 +18,7 @@ const Contact: React.FC = () => {
   };
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+    e.preventDefault(); 
     console.log("Form Data:", { category: selectedCategory, ...formData });
     alert("感謝你的留言！我將會在 3 個工作天內聯繫你。");
   };
