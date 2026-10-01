@@ -1,5 +1,4 @@
-// OrbitControls暫時移除
-import { useAnimations, useGLTF } from "@react-three/drei";
+import { OrbitControls, useAnimations, useGLTF } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { Suspense, useEffect, useMemo, useRef } from "react";
 import LogoMode from "../assets/3d/Logo.glb";
@@ -58,7 +57,7 @@ const LogoCanvas = ({
   scale = [2.5, 2.5, 2.5],
   position = [0, 0, 0],
   className = "w-full h-full",
-  // autoRotateSpeed = 1.7,
+  autoRotateSpeed = 5,
 }: LogoCanvasProps) => {
   return (
     <Canvas
@@ -67,12 +66,13 @@ const LogoCanvas = ({
     >
       <ambientLight intensity={5} />
       <directionalLight position={[10, 10, 5]} intensity={2} />
-      {/* <OrbitControls
+      <OrbitControls
         enableZoom={false}
         enablePan={false}
         autoRotate={true}
+        enableRotate={false}
         autoRotateSpeed={autoRotateSpeed}
-      /> */}
+      />
 
       <Suspense fallback={null}>
         <Logo modelPath={modelPath} scale={scale} position={position} />
