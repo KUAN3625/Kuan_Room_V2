@@ -23,9 +23,9 @@ const Hero = () => {
         </h1>
         <hr className="border-neutral-300 mb-6" />
         <p className="text-balance     sm:text-lg text-neutral-600 font-sans leading-relaxed">
-          自2025年以來便持續在Twitter活躍的3D創作者
+          自2025年以來便持續在Twitter活躍的創作者
           <nav />
-          以3D創作與動態影像為主,不斷探索3D可能性以及迭代自身技術
+          不斷探索3D可能性以及迭代自身技術
         </p>
       </div>
 

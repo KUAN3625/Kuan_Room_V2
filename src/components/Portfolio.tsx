@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Personal from "./Project/Personal";
 import Green from "./Project/Green";
 import Fox from "./Project/Fox";
 import Other from "./Project/Other";
@@ -18,10 +19,11 @@ export interface Project {
 const projects: Project[] = [
   {
     id: 1,
-    title: "個人品牌經營",
+    title: "K U A N",
+    slug: "personal",
     category: ["3D", "Design", "Other"],
     date: "2026.06",
-    img: "img/Work/web/Plastic_Sunse.jpg",
+    img: "portfolio_img/Personal/Personal_01.jpeg",
     link: "https://plastic-sunset.vercel.app",
     tags: ["React Three Fiber", "Tailwind CSS"],
     description: "。",
@@ -35,7 +37,7 @@ const projects: Project[] = [
     img: "portfolio_img/Green/Green_9.jpeg",
     tags: ["Blender", "Substance Painter"],
     description:
-      "以品牌吉祥物為主題的 3D 場景創作，著重於場景細節與後製氛圍的烘托。",
+      "以品牌吉祥物角色為主題的 3D 場景創作，著重於場景細節與後製氛圍的烘托。",
   },
   {
     id: 3,
@@ -97,6 +99,10 @@ const Portfolio: React.FC = () => {
   }, []);
 
   // 🌟 2. 條件式渲染專案獨立頁面
+  if (activeView === "personal") {
+    return <Personal onBack={handleBack} />;
+  }
+
   if (activeView === "green") {
     return <Green onBack={handleBack} />;
   }

@@ -3,8 +3,15 @@ import WrenchMode from "../assets/3d/Wrench.glb";
 
 const Skills = () => {
   const experiences = [
-    { year: "2026", title: "OOOO" },
-    { year: "2022 - 2026", title: "OOOO" },
+    {
+      year: "2026",
+      title: "Cedar group purchase co. Ltd. - Web Design Intern",
+    },
+    {
+      year: "2022 - 2026",
+      title:
+        "Minghsin University - Department of Multimedia and Game Development",
+    },
     //  { year: "2026", title: "網頁設計實習生 - 香柏樹團購事業" },
     // { year: "2022 - 2026", title: "明新科技大學 多媒體與遊戲發展系" },
   ];
