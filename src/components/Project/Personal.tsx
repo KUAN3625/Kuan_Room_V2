@@ -39,7 +39,7 @@ const Personal: React.FC<PersonalProps> = ({ onBack }) => {
       },
     ],
 
-    bottomLargeImg: "/portfolio_img/Green/Green_9.jpeg",
+    bottomLargeImg: "portfolio_img/Personal/Personal_01.jpeg",
   };
 
   return (

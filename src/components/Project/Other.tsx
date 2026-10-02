@@ -24,14 +24,13 @@ const Other: React.FC<OtherProps> = ({ onBack }) => {
   const project = {
     title: "其他",
     date: "2025.09 ~ ",
-    img: "/portfolio_img/Green/Green_9.jpeg",
+    img: "/portfolio_img/Other/Other_1.webp",
     tags: ["Blender", "Substance Painter", "Photoshop"],
-    description: "收錄了非系列作或實驗性作品。",
+    description: "收錄了散圖或實驗性作品。",
     sections: [
       {
         id: 1,
         text: "介紹文字",
-        // 2. 將原本的 string[] 改為 MediaItem[]
         media: [
           {
             type: "youtube",

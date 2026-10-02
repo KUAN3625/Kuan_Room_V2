@@ -17,17 +17,17 @@ export interface Project {
 }
 
 const projects: Project[] = [
-  {
-    id: 1,
-    title: "K U A N",
-    slug: "personal",
-    category: ["3D", "Design", "Other"],
-    date: "2026.06",
-    img: "portfolio_img/Personal/Personal_01.jpeg",
-    link: "https://plastic-sunset.vercel.app",
-    tags: ["React Three Fiber", "Tailwind CSS"],
-    description: "。",
-  },
+  // {
+  //   id: 1,
+  //   title: "K U A N",
+  //   slug: "personal",
+  //   category: ["3D", "Design", "Other"],
+  //   date: "2026.06",
+  //   img: "portfolio_img/Personal/Personal_01.jpeg",
+  //   link: "https://plastic-sunset.vercel.app",
+  //   tags: ["React Three Fiber", "Tailwind CSS"],
+  //   description: "。",
+  // },
   {
     id: 2,
     title: "Green",
@@ -56,7 +56,7 @@ const projects: Project[] = [
     slug: "other",
     category: ["Other"],
     date: "2026.06",
-    img: "/portfolio_img/Other/Other_1.png",
+    img: "/portfolio_img/Other/Other_1.webp",
     link: "https://plastic-sunset.vercel.app",
     tags: ["React Three Fiber", "Tailwind CSS"],
     description: "各種內容練習。",
@@ -121,6 +121,15 @@ const Portfolio: React.FC = () => {
         <h2 className="text-3xl sm:text-4xl font-semibold mb-4 text-neutral-900">
           Portfolio
         </h2>
+
+        <a
+          href="https://x.com/kuan7763"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-sm text-neutral-500 hover:text-neutral-900 transition-colors"
+        >
+          ※大部分作品都可在Twitter上查看
+        </a>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">

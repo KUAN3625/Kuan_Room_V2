@@ -28,7 +28,7 @@ const Loading = () => {
   return (
     <div className="fixed inset-0 bg-neutral-200 z-99 flex flex-col items-center justify-center transition-opacity duration-500">
       {/* 背景裝飾微波紋 */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-neutral-300/40 rounded-full blur-[120px] -z-10 animate-pulse"></div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-125 h-125 bg-neutral-300/40 rounded-full blur-[120px] -z-10 animate-pulse"></div>
 
       <div className="relative flex flex-col items-center">
         {/* 1. 數字時鐘 */}
@@ -45,14 +45,14 @@ const Loading = () => {
         <div className="mb-12 relative flex flex-col items-center">
           <div className="relative w-28 h-28 mb-6">
             <img
-              src="/assets/LOGOV1.webp"
+              src="/LOGOV1.webp"
               alt="Loading Logo"
               className="w-full h-full object-contain opacity-80"
             />
           </div>
 
           {/* 進度條（改為黑灰極簡線條） */}
-          <div className="relative w-48 h-[2px] bg-neutral-300 overflow-hidden rounded-full">
+          <div className="relative w-48 h-0.5 bg-neutral-300 overflow-hidden rounded-full">
             <div
               className="h-full bg-neutral-900 transition-all duration-300 ease-out"
               style={{ width: `${displayProgress}%` }}
