@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 const Contact: React.FC = () => {
   const [copied, setCopied] = useState(false);
-  const email = "kuan09931@gmail.com"; // 可替換為你的常用信箱
+  const email = "kuan09931@gmail.com"; 
 
   const handleCopyEmail = () => {
     navigator.clipboard.writeText(email);
@@ -34,7 +34,7 @@ const Contact: React.FC = () => {
           </span>
           <a
             href={`mailto:${email}`}
-            className="text-9xl sm:text-4xl font-bold tracking-tight text-neutral-900 hover:text-neutral-600 transition-colors break-all"
+            className="text-xl sm:text-4xl font-bold tracking-tight text-neutral-900 hover:text-neutral-600 transition-colors break-all"
           >
             {email}
           </a>
