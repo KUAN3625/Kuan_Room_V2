@@ -34,13 +34,13 @@ const Contact: React.FC = () => {
           </span>
           <a
             href={`mailto:${email}`}
-            className="text-xl sm:text-3xl font-bold tracking-tight text-neutral-900 hover:text-neutral-600 transition-colors break-all"
+            className="text-9xl sm:text-4xl font-bold tracking-tight text-neutral-900 hover:text-neutral-600 transition-colors break-all"
           >
             {email}
           </a>
           <button
             onClick={handleCopyEmail}
-            className="mt-2 text-xs font-medium px-4 py-1.5 rounded-full bg-neutral-200 hover:bg-neutral-300 text-neutral-700 transition-all cursor-pointer active:scale-95"
+            className="mt-2 text-1xl  font-medium px-4 py-1.5 rounded-full bg-neutral-200 hover:bg-neutral-300 text-neutral-700 transition-all cursor-pointer active:scale-95"
           >
             {copied ? "已複製信箱！" : "複製信箱"}
           </button>
