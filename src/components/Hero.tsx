@@ -19,13 +19,13 @@ const Hero = () => {
           I'm
         </p>
         <h1 className="text-5xl sm:text-6xl font-bold mb-4 text-neutral-900 tracking-tight">
-          官振群
+          KUAN ｜ K
         </h1>
         <hr className="border-neutral-300 mb-6" />
-        <p className="text-base sm:text-lg text-neutral-600 font-sans leading-relaxed">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-          sit amet nibh neque. Etiam ut orci a nibh finibus consequat vel eget
-          ipsum. Nunc eu turpis eu lorem ullamcorper ornare.
+        <p className="text-balance     sm:text-lg text-neutral-600 font-sans leading-relaxed">
+          自2025年以來便持續在Twitter活躍的3D創作者
+          <nav />
+          以3D創作與動態影像為主,不斷探索3D可能性以及迭代自身技術
         </p>
       </div>
 

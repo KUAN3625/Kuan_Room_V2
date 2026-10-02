@@ -18,6 +18,16 @@ export interface Project {
 const projects: Project[] = [
   {
     id: 1,
+    title: "個人品牌經營",
+    category: ["3D", "Design", "Other"],
+    date: "2026.06",
+    img: "img/Work/web/Plastic_Sunse.jpg",
+    link: "https://plastic-sunset.vercel.app",
+    tags: ["React Three Fiber", "Tailwind CSS"],
+    description: "。",
+  },
+  {
+    id: 2,
     title: "Green",
     slug: "green",
     category: ["3D"],
@@ -28,7 +38,7 @@ const projects: Project[] = [
       "以品牌吉祥物為主題的 3D 場景創作，著重於場景細節與後製氛圍的烘托。",
   },
   {
-    id: 2,
+    id: 3,
     title: "狐",
     slug: "fox",
     category: ["3D"],
@@ -38,16 +48,6 @@ const projects: Project[] = [
     tags: ["React Three Fiber", "Tailwind CSS"],
     description: "以日本祭典風格為主的3D場景練習。",
   },
-  // {
-  //   id: 3,
-  //   title: "個人品牌經營",
-  //   category: ["3D", "Design", "Other"],
-  //   date: "2026.06",
-  //   img: "img/Work/web/Plastic_Sunse.jpg",
-  //   link: "https://plastic-sunset.vercel.app",
-  //   tags: ["React Three Fiber", "Tailwind CSS"],
-  //   description: "。",
-  // },
   {
     id: 4,
     title: "其他",
