@@ -33,7 +33,10 @@ const Other: React.FC<OtherProps> = ({ onBack }) => {
         text: "介紹文字",
         // 2. 將原本的 string[] 改為 MediaItem[]
         media: [
-          { type: "image", src: "/portfolio_img/Green/Green_8.jpeg" },
+          {
+            type: "youtube",
+            url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+          },
           {
             type: "youtube",
             url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",

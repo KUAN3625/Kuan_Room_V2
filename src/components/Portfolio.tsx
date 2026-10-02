@@ -7,7 +7,7 @@ export interface Project {
   id: number;
   slug?: string;
   title: string;
-  category: ("3D" | "Web" | "Design")[];
+  category: ("3D" | "Web" | "Design" | "Other")[];
   date: string;
   img: string;
   link?: string;
@@ -38,21 +38,21 @@ const projects: Project[] = [
     tags: ["React Three Fiber", "Tailwind CSS"],
     description: "以日本祭典風格為主的3D場景練習。",
   },
-  {
-    id: 3,
-    title: "個人品牌經營",
-    category: ["3D", "Design"],
-    date: "2026.06",
-    img: "img/Work/web/Plastic_Sunse.jpg",
-    link: "https://plastic-sunset.vercel.app",
-    tags: ["React Three Fiber", "Tailwind CSS"],
-    description: "。",
-  },
+  // {
+  //   id: 3,
+  //   title: "個人品牌經營",
+  //   category: ["3D", "Design", "Other"],
+  //   date: "2026.06",
+  //   img: "img/Work/web/Plastic_Sunse.jpg",
+  //   link: "https://plastic-sunset.vercel.app",
+  //   tags: ["React Three Fiber", "Tailwind CSS"],
+  //   description: "。",
+  // },
   {
     id: 4,
     title: "其他",
     slug: "other",
-    category: ["3D"],
+    category: ["Other"],
     date: "2026.06",
     img: "/portfolio_img/Other/Other_1.png",
     link: "https://plastic-sunset.vercel.app",
