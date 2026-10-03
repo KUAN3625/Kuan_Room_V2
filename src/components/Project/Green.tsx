@@ -85,12 +85,12 @@ const Green: React.FC<GreenProps> = ({ onBack }) => {
             title: "Final Render",
             description: "最終高解析度渲染結果",
           },
-          {
-            type: "youtube",
-            url: "https://www.youtube.com/watch?v=YOUR_VIDEO_ID",
-            title: "Animation Reel",
-            description: "動態運鏡展示影片",
-          },
+          // {
+          //   type: "youtube",
+          //   url: "https://www.youtube.com/watch?v=YOUR_VIDEO_ID",
+          //   title: "Animation Reel",
+          //   description: "動態運鏡展示影片",
+          // },
         ] as MediaItem[],
       },
       {
