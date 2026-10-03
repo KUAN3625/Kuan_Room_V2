@@ -23,7 +23,7 @@ const projects: Project[] = [
     slug: "personal",
     category: ["3D", "Design", "Other"],
     date: "2026.06",
-    img: "portfolio_img/Personal/Personal_01.jpeg",
+    img: "public/KUAN_LOGO.webp",
     link: "https://plastic-sunset.vercel.app",
     tags: ["React Three Fiber", "Tailwind CSS"],
     description: "。",
@@ -128,7 +128,7 @@ const Portfolio: React.FC = () => {
           rel="noopener noreferrer"
           className="text-sm text-neutral-500 hover:text-neutral-900 transition-colors"
         >
-          ※大部分作品都可在Twitter上查看
+          ※大部分作品都可在Twitter上查看 ↗{"\uFE0E"}
         </a>
       </div>
 
