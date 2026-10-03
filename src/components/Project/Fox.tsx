@@ -129,7 +129,7 @@ const Fox: React.FC<FoxProps> = ({ onBack }) => {
             <p className="text-neutral-400 text-xs font-mono uppercase tracking-widest mb-2">
               INDEXED // {project.date}
             </p>
-            <h1 className="text-3xl md:text-4xl font-semibold uppercase tracking-tight mb-4 text-neutral-900">
+            <h1 className="text-3xl md:text-4xl font-semibold uppercase tracking-tight mb-4 text-neutral-900 whitespace-pre-line ">
               {project.title}
             </h1>
             <p className="text-neutral-600 leading-relaxed text-sm">
@@ -254,7 +254,7 @@ const Fox: React.FC<FoxProps> = ({ onBack }) => {
                 />
               ) : (
                 <div
-                  className="relative w-full aspect-video min-w-[320px] md:min-w-[640px] max-h-[70vh] md:max-h-[85vh] bg-black rounded-lg overflow-hidden shadow-2xl"
+                  className="relative w-full aspect-video min-w-[320px] md:min-w-160 max-h-[70vh] md:max-h-[85vh] bg-black rounded-lg overflow-hidden shadow-2xl"
                   onClick={(e) => e.stopPropagation()} // 影片操作時不關閉 Modal
                 >
                   <iframe

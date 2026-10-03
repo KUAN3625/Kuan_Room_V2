@@ -30,19 +30,20 @@ const Personal: React.FC<PersonalProps> = ({ onBack }) => {
       {
         id: 1,
         text: `形象`,
-
         media: [
           {
             type: "image",
             src: "/KUAN_LOGO.webp",
-            title: "KUAN LOGO",
-            description: "品牌視覺標誌",
+            title: "LOGO",
+            description:
+              "於2025年初設計的LOGO視覺標誌\n以圖文結合的臉部為主題\n嘗試在叛逆與可愛風格中平衡",
           },
           {
             type: "image",
             src: "portfolio_img/Personal/Personal_01.jpeg",
-            title: "Personal Concept",
-            description: "個人形象視覺構圖",
+            title: "2026：V1.5",
+            description:
+              "隨著作品風格多次演變而誕生的形象\n刪去了嘴部且整體更加圓潤\n也是最常見的個人形象",
           },
           //   { type: "image", src: "/portfolio_img/Green/Green_8-1.jpeg" },
         ] as MediaItem[],
@@ -71,10 +72,10 @@ const Personal: React.FC<PersonalProps> = ({ onBack }) => {
               type: "image",
               src: project.img,
               title: project.title,
-              description: "Brand Logo Concept",
+              description: "名稱取自個人姓氏音節\n常常被稱為K或Kさん",
             })
           }
-          className="w-full md:w-2/3 bg-neutral-200/60 rounded-2xl overflow-hidden border border-neutral-300/60 shadow-sm cursor-zoom-in"
+          className="w-full md:w-2/3 bg-neutral-200/60 rounded-2xl overflow-hidden border border-neutral-300/60 shadow-sm cursor-zoom-in whitespace-pre-line"
         >
           <img
             src={project.img}
@@ -88,7 +89,7 @@ const Personal: React.FC<PersonalProps> = ({ onBack }) => {
             <p className="text-neutral-400 text-xs font-mono uppercase tracking-widest mb-2">
               INDEXED // {project.date}
             </p>
-            <h1 className="text-3xl md:text-4xl font-semibold uppercase tracking-tight mb-4 text-neutral-900">
+            <h1 className="text-3xl md:text-4xl font-semibold uppercase tracking-tight mb-4 text-neutral-900 whitespace-pre-line ">
               {project.title}
             </h1>
             <p className="text-neutral-600 leading-relaxed text-sm">
@@ -167,13 +168,13 @@ const Personal: React.FC<PersonalProps> = ({ onBack }) => {
 
         {/* 4. 最底層的大圖 */}
         <div
-          className="rounded-2xl overflow-hidden mt-16 cursor-zoom-in group"
+          className="rounded-2xl overflow-hidden mt-16 cursor-zoom-in group whitespace-pre-line"
           onClick={() =>
             setActiveMedia({
               type: "image",
               src: project.bottomLargeImg,
               title: project.title,
-              description: "Main Banner Render",
+              description: "直到現在也正在不斷迭代,具有無限可能的形象",
             })
           }
         >
@@ -214,7 +215,7 @@ const Personal: React.FC<PersonalProps> = ({ onBack }) => {
                 />
               ) : (
                 <div
-                  className="relative w-full aspect-video min-w-[320px] md:min-w-[640px] max-h-[70vh] md:max-h-[85vh] bg-black rounded-lg overflow-hidden shadow-2xl"
+                  className="relative w-full aspect-video min-w-[320px] md:min-w-160 max-h-[70vh] md:max-h-[85vh] bg-black rounded-lg overflow-hidden shadow-2xl"
                   onClick={(e) => e.stopPropagation()}
                 >
                   <iframe
@@ -233,7 +234,7 @@ const Personal: React.FC<PersonalProps> = ({ onBack }) => {
             {/* 右側文字資訊（若有設定 title 或 description 則顯示） */}
             {(activeMedia.title || activeMedia.description) && (
               <div
-                className="w-full md:w-[25%] flex flex-col justify-center text-center md:text-left space-y-2 select-text cursor-auto md:border-l md:border-neutral-800 md:pl-8"
+                className="w-full md:w-[25%] flex flex-col justify-center text-center md:text-left space-y-3 select-text cursor-auto md:border-l md:border-neutral-800 md:pl-8"
                 onClick={(e) => e.stopPropagation()} // 點擊或拖曳文字時不會觸發外層背景的關閉
               >
                 {activeMedia.title && (
@@ -242,7 +243,7 @@ const Personal: React.FC<PersonalProps> = ({ onBack }) => {
                   </h3>
                 )}
                 {activeMedia.description && (
-                  <p className="text-neutral-400 text-xs md:text-sm font-mono leading-relaxed select-text">
+                  <p className="text-neutral-400 text-xs md:text-sm font-mono leading-relaxed select-text whitespace-pre-line">
                     {activeMedia.description}
                   </p>
                 )}

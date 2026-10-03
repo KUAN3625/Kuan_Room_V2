@@ -61,7 +61,7 @@ const Navbar: React.FC = () => {
 
       {/* 手機版下拉選單 */}
       {isOpen && (
-        <div className="md:hidden bg-neutral-200/95 backdrop-blur-md border-b border-neutral-300 x-8 py-6 transition-all">
+        <div className="md:m-5 m-5 bg-neutral-200/95 backdrop-blur-md border-b border-neutral-300 x-8 py-6 transition-all">
           <ul className="flex flex-col space-y-4">
             {navLinks.map((link) => (
               <li key={link.name}>

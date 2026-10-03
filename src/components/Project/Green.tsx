@@ -26,7 +26,7 @@ const Green: React.FC<GreenProps> = ({ onBack }) => {
     img: "/portfolio_img/Green/Green_9.jpeg",
     tags: ["Blender", "Substance Painter", "Photoshop"],
     description:
-      "以吉祥物為主題的 3D 場景創作，著重於場景渲染與後製氛圍的烘托。",
+      "以吉祥物角色為主題的一系列 3D 場景創作，著重於場景渲染與後製氛圍的烘托。",
     sections: [
       {
         id: 1,
@@ -139,17 +139,17 @@ const Green: React.FC<GreenProps> = ({ onBack }) => {
       </button>
 
       {/* 2. 封面區塊 */}
-      <div className="max-w-5xl mx-auto flex flex-col md:flex-row gap-10">
+      <div className="max-w-5xl mx-auto flex flex-col md:flex-row gap-10 ">
         <div
           onClick={() =>
             setActiveMedia({
               type: "image",
               src: project.img,
               title: project.title,
-              description: "Main Cover Render",
+              description: "原先為測試BONE的角色\n後續演變成場景中標誌性角色",
             })
           }
-          className="w-full md:w-2/3 bg-neutral-200/60 rounded-2xl overflow-hidden border border-neutral-300/60 shadow-sm cursor-zoom-in"
+          className="w-full md:w-2/3 bg-neutral-200/60 rounded-2xl overflow-hidden border border-neutral-300/60 shadow-sm cursor-zoom-in  "
         >
           <img
             src={project.img}
@@ -163,7 +163,7 @@ const Green: React.FC<GreenProps> = ({ onBack }) => {
             <p className="text-neutral-400 text-xs font-mono uppercase tracking-widest mb-2">
               INDEXED // {project.date}
             </p>
-            <h1 className="text-3xl md:text-4xl font-semibold uppercase tracking-tight mb-4 text-neutral-900">
+            <h1 className="text-3xl md:text-4xl font-semibold uppercase tracking-tight mb-4 text-neutral-900 whitespace-pre-line ">
               {project.title}
             </h1>
             <p className="text-neutral-600 leading-relaxed text-sm">
@@ -227,7 +227,7 @@ const Green: React.FC<GreenProps> = ({ onBack }) => {
                     <img
                       src={item.src}
                       alt={`detail-${i}`}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 "
                     />
                   </div>
                 );
@@ -238,7 +238,7 @@ const Green: React.FC<GreenProps> = ({ onBack }) => {
 
         {/* 4. 最底層的大圖 */}
         <div
-          className="rounded-2xl overflow-hidden mt-16 cursor-zoom-in group"
+          className="rounded-2xl overflow-hidden mt-16 cursor-zoom-in group whitespace-pre-line"
           onClick={() =>
             setActiveMedia({
               type: "image",
@@ -286,7 +286,7 @@ const Green: React.FC<GreenProps> = ({ onBack }) => {
                 />
               ) : (
                 <div
-                  className="relative w-full aspect-video min-w-[320px] md:min-w-[640px] max-h-[70vh] md:max-h-[85vh] bg-black rounded-lg overflow-hidden shadow-2xl"
+                  className="relative w-full aspect-video min-w-[320px] md:min-w-160 max-h-[70vh] md:max-h-[85vh] bg-black rounded-lg overflow-hidden shadow-2xl"
                   onClick={(e) => e.stopPropagation()} // 影片操作時不關閉 Modal
                 >
                   <iframe
@@ -309,12 +309,12 @@ const Green: React.FC<GreenProps> = ({ onBack }) => {
                 onClick={(e) => e.stopPropagation()} // 點擊或拖曳文字時不會觸發外層背景的關閉
               >
                 {activeMedia.title && (
-                  <h3 className="text-white text-lg md:text-xl font-semibold tracking-wide select-text">
+                  <h3 className="text-white text-lg md:text-xl font-semibold tracking-wide select-text whitespace-pre-line">
                     {activeMedia.title}
                   </h3>
                 )}
                 {activeMedia.description && (
-                  <p className="text-neutral-400 text-xs md:text-sm font-mono leading-relaxed select-text">
+                  <p className="text-neutral-400 text-xs md:text-sm font-mono leading-relaxed select-text whitespace-pre-line">
                     {activeMedia.description}
                   </p>
                 )}
