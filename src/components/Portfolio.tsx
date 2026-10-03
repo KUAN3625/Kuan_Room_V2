@@ -3,12 +3,13 @@ import Personal from "./Project/Personal";
 import Green from "./Project/Green";
 import Fox from "./Project/Fox";
 import Other from "./Project/Other";
+import Web from "./Project/Web";
 
 export interface Project {
   id: number;
   slug?: string;
   title: string;
-  category: ("3D" | "Web" | "Design" | "Other")[];
+  category: ("3D" | "Web" | "Design" | "Other" | "React" | "Three.js")[];
   date: string;
   img: string;
   link?: string;
@@ -43,12 +44,30 @@ const projects: Project[] = [
     id: 3,
     title: "狐",
     slug: "fox",
-    category: ["3D"],
+    category: ["3D", "Design", "Other"],
     date: "2026.06",
     img: "/portfolio_img/Lantern_Festival/Lantern Festival_1.webp",
     link: "https://plastic-sunset.vercel.app",
     tags: ["React Three Fiber", "Tailwind CSS"],
     description: "以日本祭典風格為主的3D場景練習。",
+  },
+
+  {
+    id: 3,
+    title: "Web收錄",
+    slug: "web",
+    category: ["Web"],
+    date: "2026.06",
+    img: "/portfolio_img/Other/Other_1.webp",
+    link: "https://plastic-sunset.vercel.app",
+    tags: [
+      "HTML / CSS / Javascript",
+      "React / R3F",
+      "TypeScript",
+      "Three.js",
+      "Wordpress",
+    ],
+    description: "各種內容練習。",
   },
   {
     id: 4,
@@ -109,6 +128,10 @@ const Portfolio: React.FC = () => {
 
   if (activeView === "fox") {
     return <Fox onBack={handleBack} />;
+  }
+
+  if (activeView === "web") {
+    return <Web onBack={handleBack} />;
   }
 
   if (activeView === "other") {

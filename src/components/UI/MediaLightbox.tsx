@@ -31,7 +31,7 @@ export const MediaLightbox: React.FC<MediaLightboxProps> = ({
               onClick={(e) => e.stopPropagation()}
             >
               <iframe
-                src={`https://www.youtube.com/embed/${getYoutubeId(activeMedia.url)}?autoplay=1`}
+                src={`https://www.youtube.com/embed/${getYoutubeId(activeMedia.url)}?autoplay=0`}
                 title="YouTube video player"
                 className="w-full h-full border-0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
