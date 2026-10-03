@@ -23,7 +23,7 @@ const projects: Project[] = [
     slug: "personal",
     category: ["3D", "Design", "Other"],
     date: "2026.06",
-    img: "public/KUAN_LOGO.webp",
+    img: "/KUAN_LOGO.webp",
     link: "https://plastic-sunset.vercel.app",
     tags: ["React Three Fiber", "Tailwind CSS"],
     description: "。",
