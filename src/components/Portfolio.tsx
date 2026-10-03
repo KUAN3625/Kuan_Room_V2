@@ -34,7 +34,7 @@ const projects: Project[] = [
     slug: "green",
     category: ["3D"],
     date: "2025.09 ~ ",
-    img: "portfolio_img/Green/Green_9.jpeg",
+    img: "portfolio_img/Green/Green_9.webp",
     tags: ["Blender", "Substance Painter"],
     description:
       "以品牌吉祥物角色為主題的 3D 場景創作，著重於場景細節與後製氛圍的烘托。",
@@ -45,7 +45,7 @@ const projects: Project[] = [
     slug: "fox",
     category: ["3D"],
     date: "2026.06",
-    img: "/portfolio_img/Lantern_Festival/Lantern Festival_1.jpeg",
+    img: "/portfolio_img/Lantern_Festival/Lantern Festival_1.webp",
     link: "https://plastic-sunset.vercel.app",
     tags: ["React Three Fiber", "Tailwind CSS"],
     description: "以日本祭典風格為主的3D場景練習。",

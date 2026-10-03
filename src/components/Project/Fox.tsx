@@ -11,7 +11,7 @@ const Fox: React.FC<FoxProps> = ({ onBack }) => {
     id: "fox",
     title: "狐",
     date: "2026.06 ~ 2026.07",
-    img: "/portfolio_img/Lantern_Festival/Lantern Festival_1.jpeg",
+    img: "/portfolio_img/Lantern_Festival/Lantern Festival_1.webp",
     tags: ["Blender", "Substance Painter", "Photoshop", "Kdenlive"],
     description: "以日本祭典風格為主的3D建模練習。",
     sections: [
@@ -21,19 +21,19 @@ const Fox: React.FC<FoxProps> = ({ onBack }) => {
         media: [
           {
             type: "image",
-            src: "/portfolio_img/Lantern_Festival/Lantern Festival_1.jpeg",
+            src: "/portfolio_img/Lantern_Festival/Lantern Festival_1.webp",
             title: "Lantern Festival 01",
             description: "祭典燈籠與狐狸面具主場景渲染",
           },
           {
             type: "image",
-            src: "/portfolio_img/Lantern_Festival/Lantern Festival_2.jpeg",
+            src: "/portfolio_img/Lantern_Festival/Lantern Festival_2.webp",
             title: "Lantern Festival 02",
             description: "深夜祭典氛圍與夜間光影特寫",
           },
           {
             type: "image",
-            src: "/portfolio_img/Lantern_Festival/Lantern Festival_3.jpeg",
+            src: "/portfolio_img/Lantern_Festival/Lantern Festival_3.webp",
             title: "Lantern Festival 03",
             description: "道具資產細節與貼圖質感展示",
           },
@@ -77,7 +77,7 @@ const Fox: React.FC<FoxProps> = ({ onBack }) => {
       },
     ],
 
-    bottomLargeImg: "/portfolio_img/Lantern_Festival/Lantern Festival_4.jpeg",
+    bottomLargeImg: "/portfolio_img/Lantern_Festival/Lantern Festival_4.webp",
   };
 
   return (

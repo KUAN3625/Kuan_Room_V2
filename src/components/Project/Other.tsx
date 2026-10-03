@@ -46,13 +46,13 @@ const Other: React.FC<OtherProps> = ({ onBack }) => {
           },
           {
             type: "image",
-            src: "/portfolio_img/Green/Green_5.jpeg",
+            src: "/portfolio_img/Green/Green_5.webp",
             title: "Artwork 01",
             description: "材質與質感刻畫細節",
           },
           {
             type: "image",
-            src: "/portfolio_img/Green/Green_5-1.jpeg",
+            src: "/portfolio_img/Green/Green_5-1.webp",
             title: "Artwork 02",
             description: "氛圍營造與後製調色",
           },
@@ -63,13 +63,13 @@ const Other: React.FC<OtherProps> = ({ onBack }) => {
         media: [
           {
             type: "image",
-            src: "/portfolio_img/Green/Green_11.jpeg",
+            src: "/portfolio_img/Green/Green_11.webp",
             title: "Detail Render 01",
             description: "模型與紋理展現",
           },
           {
             type: "image",
-            src: "/portfolio_img/Green/Green_3.jpeg",
+            src: "/portfolio_img/Green/Green_3.webp",
             title: "Lighting Practice",
             description: "打光測試與色彩搭配",
           },
@@ -81,14 +81,14 @@ const Other: React.FC<OtherProps> = ({ onBack }) => {
           },
           {
             type: "image",
-            src: "/portfolio_img/Green/Green_6.jpeg",
+            src: "/portfolio_img/Green/Green_6.webp",
             title: "Final Composite",
             description: "合成與最終渲染結果",
           },
         ] as MediaItem[],
       },
     ],
-    bottomLargeImg: "/portfolio_img/Green/Green_9.jpeg",
+    bottomLargeImg: "/portfolio_img/Green/Green_9.webp",
   };
 
   return (

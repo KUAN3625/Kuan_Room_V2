@@ -21,7 +21,7 @@ const Personal: React.FC<PersonalProps> = ({ onBack }) => {
   const project = {
     title: "KUAN",
     date: "2025.04 ~ ",
-    // img: "portfolio_img/Personal/Personal_01.jpeg",
+    // img: "portfolio_img/Personal/Personal_01.webp",
     img: "/KUAN_LOGO.webp",
     tags: ["3D", "web", "Design", "Other"],
     description:
@@ -40,24 +40,24 @@ const Personal: React.FC<PersonalProps> = ({ onBack }) => {
           },
           {
             type: "image",
-            src: "portfolio_img/Personal/Personal_01.jpeg",
+            src: "portfolio_img/Personal/Personal_01.webp",
             title: "2026：V1.5",
             description:
               "隨著作品風格多次演變而誕生的形象\n刪去了嘴部且整體更加圓潤\n也是最常見的個人形象",
           },
           {
             type: "image",
-            src: "portfolio_img/Personal/Personal_01.jpeg",
+            src: "portfolio_img/Personal/Personal_01.webp",
             title: "2026：V1.5",
             description:
               "隨著作品風格多次演變而誕生的形象\n刪去了嘴部且整體更加圓潤\n也是最常見的個人形象",
           },
-          //   { type: "image", src: "/portfolio_img/Green/Green_8-1.jpeg" },
+          //   { type: "image", src: "/portfolio_img/Green/Green_8-1.webp" },
         ] as MediaItem[],
       },
     ],
 
-    bottomLargeImg: "portfolio_img/Personal/Personal_01.jpeg",
+    bottomLargeImg: "portfolio_img/Personal/Personal_01.webp",
   };
 
   return (

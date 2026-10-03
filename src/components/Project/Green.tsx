@@ -11,7 +11,7 @@ const Green: React.FC<GreenProps> = ({ onBack }) => {
     id: "green",
     title: ` GREEN `,
     date: "2025.09 ~ ",
-    img: "/portfolio_img/Green/Green_9.jpeg",
+    img: "/portfolio_img/Green/Green_9.webp",
     tags: ["Blender", "Substance Painter", "Photoshop", "VRoid Studio"],
     description:
       "以吉祥物角色為主題的一系列 3D 場景創作，著重於場景渲染與後製氛圍的烘托。",
@@ -22,26 +22,26 @@ const Green: React.FC<GreenProps> = ({ onBack }) => {
         media: [
           {
             type: "image",
-            src: "/portfolio_img/Green/Green_8.jpeg",
+            src: "/portfolio_img/Green/Green_8.webp",
             title: "放晴",
             description: "\n2026.09.28",
           },
           {
             type: "image",
-            src: "/portfolio_img/Green/Green_8-1.jpeg",
-            title: "放晴：Showreel",
+            src: "/portfolio_img/Green/Green_8-1.webp",
+            title: "放晴：Model",
             description: "\n2026.09.28",
           },
           {
             type: "image",
-            src: "/portfolio_img/Green/Green_5.jpeg",
+            src: "/portfolio_img/Green/Green_5.webp",
             title: "逆行",
             description: "\n2026.09.17",
           },
           {
             type: "image",
-            src: "/portfolio_img/Green/Green_5-1.jpeg",
-            title: "逆行：Showreel",
+            src: "/portfolio_img/Green/Green_5-1.webp",
+            title: "逆行：Model",
             description: "\n2026.09.17",
           },
         ] as MediaItem[],
@@ -57,19 +57,19 @@ const Green: React.FC<GreenProps> = ({ onBack }) => {
           },
           {
             type: "image",
-            src: "/portfolio_img/Green/Green_3.jpeg",
+            src: "/portfolio_img/Green/Green_3.webp",
             title: "心相",
             description: "\n2026.09.08",
           },
           {
             type: "image",
-            src: "/portfolio_img/Green/Green_6.jpeg",
+            src: "/portfolio_img/Green/Green_6.webp",
             title: "3:00 PM ①",
             description: "\n2026.09.18",
           },
           {
             type: "image",
-            src: "/portfolio_img/Green/Green_7.jpeg",
+            src: "/portfolio_img/Green/Green_7.webp",
             title: "3:00 PM ②",
             description: "\n2026.09.19",
           },
@@ -107,7 +107,7 @@ const Green: React.FC<GreenProps> = ({ onBack }) => {
         ] as MediaItem[],
       },
     ],
-    bottomLargeImg: "/portfolio_img/Green/Green_9.jpeg",
+    bottomLargeImg: "/portfolio_img/Green/Green_9.webp",
   };
 
   return (
