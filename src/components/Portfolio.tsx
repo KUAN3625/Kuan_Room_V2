@@ -53,8 +53,8 @@ const projects: Project[] = [
   },
 
   {
-    id: 3,
-    title: "Web收錄",
+    id: 4,
+    title: "Web 作品",
     slug: "web",
     category: ["Web"],
     date: "2026.06",
@@ -67,19 +67,19 @@ const projects: Project[] = [
       "Three.js",
       "Wordpress",
     ],
-    description: "各種內容練習。",
+    description: "收錄了過去。",
   },
-  {
-    id: 4,
-    title: "其他",
-    slug: "other",
-    category: ["Other"],
-    date: "2026.06",
-    img: "/portfolio_img/Other/Other_1.webp",
-    link: "https://plastic-sunset.vercel.app",
-    tags: ["React Three Fiber", "Tailwind CSS"],
-    description: "各種內容練習。",
-  },
+  // {
+  //   id: 4,
+  //   title: "其他",
+  //   slug: "other",
+  //   category: ["Other"],
+  //   date: "2026.06",
+  //   img: "/portfolio_img/Other/Other_1.webp",
+  //   link: "https://plastic-sunset.vercel.app",
+  //   tags: ["React Three Fiber", "Tailwind CSS"],
+  //   description: "各種內容練習。",
+  // },
 ];
 
 const Portfolio: React.FC = () => {
@@ -117,7 +117,7 @@ const Portfolio: React.FC = () => {
     return () => window.removeEventListener("popstate", handlePopState);
   }, []);
 
-  // 🌟 2. 條件式渲染專案獨立頁面
+  //  條件式渲染專案獨立頁面
   if (activeView === "personal") {
     return <Personal onBack={handleBack} />;
   }
@@ -160,9 +160,13 @@ const Portfolio: React.FC = () => {
           <div
             key={proj.id}
             onClick={() => {
-              // 🌟 3. 通用的點擊事件處理
               if (proj.slug) {
-                window.history.pushState({ view: proj.slug }, "");
+                // 🌟 點擊卡片時，更新網址為 ?project=fox
+                window.history.pushState(
+                  { view: proj.slug },
+                  "",
+                  `?project=${proj.slug}`,
+                );
                 handleViewChange(proj.slug);
               }
             }}
@@ -172,7 +176,7 @@ const Portfolio: React.FC = () => {
               <img
                 src={proj.img}
                 alt={proj.title}
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 select-none pointer-events-none"
               />
             </div>
 

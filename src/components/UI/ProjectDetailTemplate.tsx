@@ -63,7 +63,7 @@ export const ProjectDetailTemplate: React.FC<ProjectDetailTemplateProps> = ({
           <img
             src={project.bottomLargeImg}
             alt="Large Banner"
-            className="w-full h-auto object-cover max-h-[85vh] group-hover:scale-[1.01] transition-transform duration-300"
+            className="w-full h-auto object-cover max-h-[85vh] group-hover:scale-[1.01] transition-transform duration-300 select-none pointer-events-none"
           />
         </div>
 

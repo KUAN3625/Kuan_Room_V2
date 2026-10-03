@@ -51,8 +51,33 @@ const Green: React.FC<GreenProps> = ({ onBack }) => {
         media: [
           {
             type: "image",
+            src: "/portfolio_img/Green/Green_11.webp",
+            title: "正視圖",
+            description: "\n2026.09.08",
+          },
+          {
+            type: "image",
             src: "/portfolio_img/Green/V1.5.webp",
-            title: "Green : V1.5",
+            title: "Hello !",
+            description:
+              "目前的形象\n除了衣物改為物理模擬外\n也調整了頭髮與重繪眼部\n2026.09.16",
+          },
+          {
+            type: "image",
+            src: "/portfolio_img/Green/Green_10.webp",
+            title: "Ver. 1.5 ： ITERATION",
+            description: "為了作品風格演變而新增的正比形象\n2026.09.05",
+          },
+          {
+            type: "image",
+            src: "/portfolio_img/Green/Green_9.webp",
+            title: "- 交差点 -",
+            description: "\n2026.10.01",
+          },
+          {
+            type: "image",
+            src: "/portfolio_img/Green/Null.webp",
+            title: "Click !",
             description: "\n2026.09.16",
           },
           {
@@ -80,29 +105,27 @@ const Green: React.FC<GreenProps> = ({ onBack }) => {
         media: [
           {
             type: "image",
-            src: "/portfolio_img/Green/work/Green_reveal_10.webp",
+            src: "/portfolio_img/Green/work/Green_reveal_04.webp",
             title: "V1.5：Model",
             description: "嘗試優化佈線以及重建頭髮",
           },
           {
             type: "image",
+            src: "/portfolio_img/Green/work/Green_reveal_05.webp",
+            title: "V1.5：BONE",
+            description: "手動重建骨骼並處理了髮型",
+          },
+          {
+            type: "image",
+            src: "/portfolio_img/Green/work/Green_reveal_01.webp",
+            title: "V1.5：Model",
+            description: "\n 使用VRoid Studio作為基底\n後續再匯入Blender處理",
+          },
+          {
+            type: "image",
             src: "/portfolio_img/Green/work/Green_reveal_03.webp",
             title: "V1.5：BONE",
-            description: "骨骼處理",
-          },
-          {
-            type: "image",
-            src: "/portfolio_img/Green/work/Green_reveal_04.webp",
-            title: "V1.5：Model",
-            description:
-              "於1.5新增的正比形象\n 使用VRoid Studio作為基底\n後續再匯入Blender處理",
-          },
-          {
-            type: "image",
-            src: "/portfolio_img/Green/work/Green_reveal_07.webp",
-            title: "V1.5：BONE",
-            description:
-              " 為了熟悉骨骼綁定\n未使用VRM檔的原生骨骼\n而是手動重建骨骼並塗抹權重",
+            description: " 為了熟悉骨骼綁定\n手動做了些權重塗抹與IK＆FK處理",
           },
         ] as MediaItem[],
       },
@@ -117,7 +140,7 @@ const Green: React.FC<GreenProps> = ({ onBack }) => {
       coverDescription={
         "前身為早期學習建模的人體模型\n後續也開始擔當各種技術測試的常客\n最終成為個人標誌性角色"
       }
-      bottomImageDescription={` “ 正因為持續迭代才能更接近完美 ”`}
+      bottomImageDescription={` “ 正因為持續迭代才能接近完美 ”`}
     />
   );
 };

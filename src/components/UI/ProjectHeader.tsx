@@ -29,7 +29,7 @@ export const ProjectHeader: React.FC<ProjectHeaderProps> = ({
         <img
           src={project.img}
           alt={project.title}
-          className="w-full h-auto object-cover max-h-[70vh]"
+          className="w-full h-auto object-cover max-h-[70vh] select-none pointer-events-none"
         />
       </div>
 

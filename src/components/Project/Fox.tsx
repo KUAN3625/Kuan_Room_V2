@@ -13,79 +13,80 @@ const Fox: React.FC<FoxProps> = ({ onBack }) => {
     date: "2026.06 ~ 2026.07",
     img: "/portfolio_img/Lantern_Festival/Lantern Festival_1.webp",
     tags: ["Blender", "Substance Painter", "Photoshop", "Kdenlive"],
-    description: "以日本祭典風格為主的3D建模練習。",
+    description: "日本祭典風格的一系列3D建模。",
     sections: [
       {
         id: 1,
-        text: "介紹文字",
+        // text: "介紹文字",
         media: [
           {
             type: "image",
-            src: "/portfolio_img/Lantern_Festival/Lantern Festival_1.webp",
-            title: "Lantern Festival 01",
-            description: "祭典燈籠與狐狸面具主場景渲染",
-          },
-          {
-            type: "image",
             src: "/portfolio_img/Lantern_Festival/Lantern Festival_2.webp",
-            title: "Lantern Festival 02",
-            description: "深夜祭典氛圍與夜間光影特寫",
+            title: "燈籠物件",
+            description: "\n2026.06.04",
           },
           {
             type: "image",
             src: "/portfolio_img/Lantern_Festival/Lantern Festival_3.webp",
-            title: "Lantern Festival 03",
-            description: "道具資產細節與貼圖質感展示",
+            title: "屋台",
+            description: "\n2026.06.14",
+          },
+          {
+            type: "image",
+            src: "/portfolio_img/Lantern_Festival/Lantern Festival_4.webp",
+            title: "夜食",
+            description: "\n2026.06.15",
           },
           {
             type: "youtube",
             url: "https://www.youtube.com/watch?v=ABVpc0Jsb40",
-            title: "Festival Animation",
-            description: "3D 場景動態展示影片",
+            title: "亮相",
+            description: "3D動態展示",
           },
         ] as MediaItem[],
       },
       {
         id: 2,
-        text: "介紹文字",
         media: [
           {
             type: "image",
             src: "/portfolio_img/Lantern_Festival/Work/Fox_reveal_01.webp",
-            title: "Process 01",
-            description: "基礎白模搭建與透視構圖測試",
+            title: "UV展開 : 身體",
+            description: "\n盡可能讓UV能夠整齊規律",
           },
           {
             type: "image",
             src: "/portfolio_img/Lantern_Festival/Work/Fox_reveal_03.webp",
-            title: "Process 02",
-            description: "Substance Painter 紋理繪製與發光貼圖設定",
+            title: "UV展開 : 衣物",
+            description: "簡單拆分衣物進行展開",
           },
           {
             type: "image",
             src: "/portfolio_img/Lantern_Festival/Work/Fox_reveal_04.webp",
-            title: "Process 03",
-            description: "Blender 節點光源佈局與體積霧打光",
+            title: "面部",
+            description: "展示面部細節\n髮型則是使用VRoid Studio製作",
           },
           {
             type: "image",
             src: "/portfolio_img/Lantern_Festival/Work/Fox_reveal_06.webp",
-            title: "Process 04",
-            description: "Photoshop 後期調色與色調對比調整",
+            title: "全身展示",
+            description:
+              "由於場景大部分為暖光\n因此衣物設計上稍微降低飽和度\n讓她能夠更自然融入場景",
           },
         ] as MediaItem[],
       },
     ],
 
-    bottomLargeImg: "/portfolio_img/Lantern_Festival/Lantern Festival_4.webp",
+    bottomLargeImg: "/portfolio_img/Lantern_Festival/Lantern Festival_1.webp",
   };
 
   return (
     <ProjectDetailTemplate
       project={project}
       onBack={onBack}
-      coverDescription="Main Hero Render"
-      bottomImageDescription="Full Hero Banner"
+      coverDescription="系列場景以狐狸＆祭典去發想制作
+      希望能呈現出夜間祭典的氛圍感"
+      bottomImageDescription="祭 典"
     />
   );
 };
