@@ -3,7 +3,7 @@ import { Canvas } from "@react-three/fiber";
 import { Suspense, useEffect, useMemo, useRef } from "react";
 import LogoMode from "../assets/3d/Logo.glb";
 import * as THREE from "three";
-import { SkeletonUtils } from "three-stdlib";
+import { SkeletonUtils } from "three-stdlib"; //複製3D模型實例化
 
 type Vector3D = [number, number, number];
 

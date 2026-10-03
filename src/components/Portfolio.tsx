@@ -17,17 +17,17 @@ export interface Project {
 }
 
 const projects: Project[] = [
-  // {
-  //   id: 1,
-  //   title: "K U A N",
-  //   slug: "personal",
-  //   category: ["3D", "Design", "Other"],
-  //   date: "2026.06",
-  //   img: "portfolio_img/Personal/Personal_01.jpeg",
-  //   link: "https://plastic-sunset.vercel.app",
-  //   tags: ["React Three Fiber", "Tailwind CSS"],
-  //   description: "。",
-  // },
+  {
+    id: 1,
+    title: "K U A N",
+    slug: "personal",
+    category: ["3D", "Design", "Other"],
+    date: "2026.06",
+    img: "portfolio_img/Personal/Personal_01.jpeg",
+    link: "https://plastic-sunset.vercel.app",
+    tags: ["React Three Fiber", "Tailwind CSS"],
+    description: "。",
+  },
   {
     id: 2,
     title: "Green",

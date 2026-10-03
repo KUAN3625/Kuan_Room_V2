@@ -2,8 +2,8 @@ import { useState } from "react";
 import { BsArrowLeft, BsPlayFill } from "react-icons/bs";
 
 type MediaItem =
-  | { type: "image"; src: string }
-  | { type: "youtube"; url: string };
+  | { type: "image"; src: string; title?: string; description?: string }
+  | { type: "youtube"; url: string; title?: string; description?: string };
 
 interface PersonalProps {
   onBack: () => void;
@@ -32,8 +32,18 @@ const Personal: React.FC<PersonalProps> = ({ onBack }) => {
         text: `形象`,
 
         media: [
-          { type: "image", src: "/KUAN_LOGO.webp" },
-          { type: "image", src: "portfolio_img/Personal/Personal_01.jpeg" },
+          {
+            type: "image",
+            src: "/KUAN_LOGO.webp",
+            title: "KUAN LOGO",
+            description: "品牌視覺標誌",
+          },
+          {
+            type: "image",
+            src: "portfolio_img/Personal/Personal_01.jpeg",
+            title: "Personal Concept",
+            description: "個人形象視覺構圖",
+          },
           //   { type: "image", src: "/portfolio_img/Green/Green_8-1.jpeg" },
         ] as MediaItem[],
       },
@@ -56,7 +66,14 @@ const Personal: React.FC<PersonalProps> = ({ onBack }) => {
       {/* 2. 封面區塊 */}
       <div className="max-w-5xl mx-auto flex flex-col md:flex-row gap-10">
         <div
-          onClick={() => setActiveMedia({ type: "image", src: project.img })}
+          onClick={() =>
+            setActiveMedia({
+              type: "image",
+              src: project.img,
+              title: project.title,
+              description: "Brand Logo Concept",
+            })
+          }
           className="w-full md:w-2/3 bg-neutral-200/60 rounded-2xl overflow-hidden border border-neutral-300/60 shadow-sm cursor-zoom-in"
         >
           <img
@@ -152,7 +169,12 @@ const Personal: React.FC<PersonalProps> = ({ onBack }) => {
         <div
           className="rounded-2xl overflow-hidden mt-16 cursor-zoom-in group"
           onClick={() =>
-            setActiveMedia({ type: "image", src: project.bottomLargeImg })
+            setActiveMedia({
+              type: "image",
+              src: project.bottomLargeImg,
+              title: project.title,
+              description: "Main Banner Render",
+            })
           }
         >
           <img
@@ -174,35 +196,59 @@ const Personal: React.FC<PersonalProps> = ({ onBack }) => {
         </div>
       </div>
 
-      {/* 🌟 6. Lightbox Modal (支援圖片與 YouTube 嵌入) */}
+      {/* 🌟 6. Lightbox Modal (支援圖片、YouTube 與右側文字顯示) */}
       {activeMedia && (
         <div
           onClick={() => setActiveMedia(null)}
-          className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 md:p-8 animate-in fade-in duration-200 cursor-pointer"
+          className="fixed inset-0 z-50 bg-black/85 backdrop-blur-sm flex items-center justify-center p-6 md:p-12 animate-in fade-in duration-200 cursor-pointer select-none"
         >
-          {activeMedia.type === "image" ? (
-            <img
-              src={activeMedia.src}
-              alt="Full size view"
-              className="max-w-full max-h-[85vh] object-contain rounded-lg shadow-2xl cursor-zoom-out"
-              onClick={() => setActiveMedia(null)}
-            />
-          ) : (
-            <div
-              className="relative max-w-5xl w-full aspect-video max-h-[85vh] bg-black rounded-lg overflow-hidden shadow-2xl cursor-default"
-              onClick={(e) => e.stopPropagation()} // 點擊影片區域時不關閉，點擊影片外的黑背景即可關閉
-            >
-              <iframe
-                src={`https://www.youtube.com/embed/${getYoutubeId(
-                  activeMedia.url,
-                )}?autoplay=1`}
-                title="YouTube video player"
-                className="w-full h-full border-0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
+          <div className="flex flex-col md:flex-row items-center justify-center max-w-6xl w-full max-h-[85vh] gap-6 md:gap-10">
+            {/* 左側媒體 */}
+            <div className="flex items-center justify-center max-w-full md:max-w-[75%] max-h-[70vh] md:max-h-[85vh] select-none">
+              {activeMedia.type === "image" ? (
+                <img
+                  src={activeMedia.src}
+                  alt={activeMedia.title || "Full size view"}
+                  className="max-w-full max-h-[70vh] md:max-h-[85vh] object-contain rounded-lg shadow-2xl cursor-zoom-out select-none pointer-events-none"
+                  draggable={false}
+                />
+              ) : (
+                <div
+                  className="relative w-full aspect-video min-w-[320px] md:min-w-[640px] max-h-[70vh] md:max-h-[85vh] bg-black rounded-lg overflow-hidden shadow-2xl"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <iframe
+                    src={`https://www.youtube.com/embed/${getYoutubeId(
+                      activeMedia.url,
+                    )}?autoplay=1`}
+                    title="YouTube video player"
+                    className="w-full h-full border-0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                </div>
+              )}
             </div>
-          )}
+
+            {/* 右側文字資訊（若有設定 title 或 description 則顯示） */}
+            {(activeMedia.title || activeMedia.description) && (
+              <div
+                className="w-full md:w-[25%] flex flex-col justify-center text-center md:text-left space-y-2 select-text cursor-auto md:border-l md:border-neutral-800 md:pl-8"
+                onClick={(e) => e.stopPropagation()} // 點擊或拖曳文字時不會觸發外層背景的關閉
+              >
+                {activeMedia.title && (
+                  <h3 className="text-white text-lg md:text-xl font-semibold tracking-wide select-text">
+                    {activeMedia.title}
+                  </h3>
+                )}
+                {activeMedia.description && (
+                  <p className="text-neutral-400 text-xs md:text-sm font-mono leading-relaxed select-text">
+                    {activeMedia.description}
+                  </p>
+                )}
+              </div>
+            )}
+          </div>
         </div>
       )}
     </div>

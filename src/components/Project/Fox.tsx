@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { BsArrowLeft, BsPlayFill } from "react-icons/bs";
 
-// 1. 定義媒體項目的型別
+// 1. 定義媒體項目的型別 (擴充 title 與 description)
 type MediaItem =
-  | { type: "image"; src: string }
-  | { type: "youtube"; url: string };
+  | { type: "image"; src: string; title?: string; description?: string }
+  | { type: "youtube"; url: string; title?: string; description?: string };
 
 interface FoxProps {
   onBack: () => void;
@@ -25,7 +25,7 @@ const Fox: React.FC<FoxProps> = ({ onBack }) => {
     title: "狐",
     date: "2026.06 ~ 2026.07",
     img: "/portfolio_img/Lantern_Festival/Lantern Festival_1.jpeg",
-    tags: ["Blender", "Substance Painter", "Potoshop", "Kdenlive"],
+    tags: ["Blender", "Substance Painter", "Photoshop", "Kdenlive"],
     description: "以日本祭典風格為主的3D建模練習。",
     sections: [
       {
@@ -35,18 +35,26 @@ const Fox: React.FC<FoxProps> = ({ onBack }) => {
           {
             type: "image",
             src: "/portfolio_img/Lantern_Festival/Lantern Festival_1.jpeg",
+            title: "Lantern Festival 01",
+            description: "祭典燈籠與狐狸面具主場景渲染",
           },
           {
             type: "image",
             src: "/portfolio_img/Lantern_Festival/Lantern Festival_2.jpeg",
+            title: "Lantern Festival 02",
+            description: "深夜祭典氛圍與夜間光影特寫",
           },
           {
             type: "image",
             src: "/portfolio_img/Lantern_Festival/Lantern Festival_3.jpeg",
+            title: "Lantern Festival 03",
+            description: "道具資產細節與貼圖質感展示",
           },
           {
             type: "youtube",
             url: "https://www.youtube.com/watch?v=ABVpc0Jsb40",
+            title: "Festival Animation",
+            description: "3D 場景動態展示影片",
           },
         ] as MediaItem[],
       },
@@ -57,18 +65,26 @@ const Fox: React.FC<FoxProps> = ({ onBack }) => {
           {
             type: "image",
             src: "/portfolio_img/Lantern_Festival/Work/Fox_reveal_01.webp",
+            title: "Process 01",
+            description: "基礎白模搭建與透視構圖測試",
           },
           {
             type: "image",
             src: "/portfolio_img/Lantern_Festival/Work/Fox_reveal_03.webp",
+            title: "Process 02",
+            description: "Substance Painter 紋理繪製與發光貼圖設定",
           },
           {
             type: "image",
             src: "/portfolio_img/Lantern_Festival/Work/Fox_reveal_04.webp",
+            title: "Process 03",
+            description: "Blender 節點光源佈局與體積霧打光",
           },
           {
             type: "image",
             src: "/portfolio_img/Lantern_Festival/Work/Fox_reveal_06.webp",
+            title: "Process 04",
+            description: "Photoshop 後期調色與色調對比調整",
           },
         ] as MediaItem[],
       },
@@ -91,7 +107,14 @@ const Fox: React.FC<FoxProps> = ({ onBack }) => {
       {/* 2. 封面區塊 */}
       <div className="max-w-5xl mx-auto flex flex-col md:flex-row gap-10">
         <div
-          onClick={() => setActiveMedia({ type: "image", src: project.img })}
+          onClick={() =>
+            setActiveMedia({
+              type: "image",
+              src: project.img,
+              title: project.title,
+              description: "Main Hero Render",
+            })
+          }
           className="w-full md:w-2/3 bg-neutral-200/60 rounded-2xl overflow-hidden border border-neutral-300/60 shadow-sm cursor-zoom-in"
         >
           <img
@@ -185,7 +208,12 @@ const Fox: React.FC<FoxProps> = ({ onBack }) => {
         <div
           className="rounded-2xl overflow-hidden mt-16 cursor-zoom-in group"
           onClick={() =>
-            setActiveMedia({ type: "image", src: project.bottomLargeImg })
+            setActiveMedia({
+              type: "image",
+              src: project.bottomLargeImg,
+              title: project.title,
+              description: "Full Hero Banner",
+            })
           }
         >
           <img
@@ -207,35 +235,60 @@ const Fox: React.FC<FoxProps> = ({ onBack }) => {
         </div>
       </div>
 
-      {/* 🌟 6. Lightbox Modal (支援圖片與 YouTube 嵌入) */}
+      {/* 🌟 6. Lightbox Modal (右側顯示文字，點擊任意處均可關閉) */}
       {activeMedia && (
         <div
           onClick={() => setActiveMedia(null)}
-          className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 md:p-8 animate-in fade-in duration-200 cursor-pointer"
+          className="fixed inset-0 z-50 bg-black/85 backdrop-blur-sm flex items-center justify-center p-6 md:p-12 animate-in fade-in duration-200 cursor-pointer select-none"
         >
-          {activeMedia.type === "image" ? (
-            <img
-              src={activeMedia.src}
-              alt="Full size view"
-              className="max-w-full max-h-[85vh] object-contain rounded-lg shadow-2xl cursor-zoom-out"
-              onClick={() => setActiveMedia(null)}
-            />
-          ) : (
-            <div
-              className="relative max-w-5xl w-full aspect-video max-h-[85vh] bg-black rounded-lg overflow-hidden shadow-2xl cursor-default"
-              onClick={(e) => e.stopPropagation()} // 點擊影片區域時不關閉，點擊影片外的黑背景即可關閉
-            >
-              <iframe
-                src={`https://www.youtube.com/embed/${getYoutubeId(
-                  activeMedia.url,
-                )}?autoplay=1`}
-                title="YouTube video player"
-                className="w-full h-full border-0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
+          {/* 外層左右佈局容器 */}
+          <div className="flex flex-col md:flex-row items-center justify-center max-w-6xl w-full max-h-[85vh] gap-6 md:gap-10">
+            {/* 左側：媒體內容區域 (禁用選取與拖曳) */}
+            <div className="flex items-center justify-center max-w-full md:max-w-[75%] max-h-[70vh] md:max-h-[85vh] select-none">
+              {activeMedia.type === "image" ? (
+                <img
+                  src={activeMedia.src}
+                  alt={activeMedia.title || "Full size view"}
+                  className="max-w-full max-h-[70vh] md:max-h-[85vh] object-contain rounded-lg shadow-2xl cursor-zoom-out select-none pointer-events-none"
+                  draggable={false}
+                />
+              ) : (
+                <div
+                  className="relative w-full aspect-video min-w-[320px] md:min-w-[640px] max-h-[70vh] md:max-h-[85vh] bg-black rounded-lg overflow-hidden shadow-2xl"
+                  onClick={(e) => e.stopPropagation()} // 影片操作時不關閉 Modal
+                >
+                  <iframe
+                    src={`https://www.youtube.com/embed/${getYoutubeId(
+                      activeMedia.url,
+                    )}?autoplay=1`}
+                    title="YouTube video player"
+                    className="w-full h-full border-0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                </div>
+              )}
             </div>
-          )}
+
+            {/* 右側：文字資訊區塊 (獨立允許選取，且選取時不觸發背景點擊關閉) */}
+            {(activeMedia.title || activeMedia.description) && (
+              <div
+                className="w-full md:w-[25%] flex flex-col justify-center text-center md:text-left space-y-2 select-text cursor-auto md:border-l md:border-neutral-800 md:pl-8"
+                onClick={(e) => e.stopPropagation()} // 點擊或拖曳文字時不會觸發外層背景的關閉
+              >
+                {activeMedia.title && (
+                  <h3 className="text-white text-lg md:text-xl font-semibold tracking-wide select-text">
+                    {activeMedia.title}
+                  </h3>
+                )}
+                {activeMedia.description && (
+                  <p className="text-neutral-400 text-xs md:text-sm font-mono leading-relaxed select-text">
+                    {activeMedia.description}
+                  </p>
+                )}
+              </div>
+            )}
+          </div>
         </div>
       )}
     </div>
