@@ -24,7 +24,7 @@ const Green: React.FC<GreenProps> = ({ onBack }) => {
     title: "Green",
     date: "2025.09 ~ ",
     img: "/portfolio_img/Green/Green_9.jpeg",
-    tags: ["Blender", "Substance Painter", "Photoshop"],
+    tags: ["Blender", "Substance Painter", "Photoshop", "VRoid Studio"],
     description:
       "以吉祥物角色為主題的一系列 3D 場景創作，著重於場景渲染與後製氛圍的烘托。",
     sections: [
@@ -35,26 +35,26 @@ const Green: React.FC<GreenProps> = ({ onBack }) => {
           {
             type: "image",
             src: "/portfolio_img/Green/Green_8.jpeg",
-            title: "Green Scene 01",
-            description: "場景整體近景渲染細節",
+            title: "放晴",
+            description: "\n2026.09.28",
           },
           {
             type: "image",
             src: "/portfolio_img/Green/Green_8-1.jpeg",
-            title: "Green Scene 02",
-            description: "光影特寫與材質質感呈現",
+            title: "放晴：Showreel",
+            description: "\n2026.09.28",
           },
           {
             type: "image",
             src: "/portfolio_img/Green/Green_5.jpeg",
-            title: "Green Scene 03",
-            description: "角色與環境互動關係設定",
+            title: "逆行",
+            description: "\n2026.09.17",
           },
           {
             type: "image",
             src: "/portfolio_img/Green/Green_5-1.jpeg",
-            title: "Green Scene 04",
-            description: "後製顏色調校與氛圍營造",
+            title: "逆行：Showreel",
+            description: "\n2026.09.17",
           },
         ] as MediaItem[],
       },
@@ -64,8 +64,8 @@ const Green: React.FC<GreenProps> = ({ onBack }) => {
           {
             type: "image",
             src: "/portfolio_img/Green/Green_11.jpeg",
-            title: "Environment Detail",
-            description: "資產貼圖與模型細節展現",
+            title: "V1.5 ： 模型展示",
+            description: "後續更新的V1.5模型,",
           },
           {
             type: "image",
@@ -85,12 +85,12 @@ const Green: React.FC<GreenProps> = ({ onBack }) => {
             title: "Final Render",
             description: "最終高解析度渲染結果",
           },
-          // {
-          //   type: "youtube",
-          //   url: "https://www.youtube.com/watch?v=YOUR_VIDEO_ID",
-          //   title: "Animation Reel",
-          //   description: "動態運鏡展示影片"
-          // },
+          {
+            type: "youtube",
+            url: "https://www.youtube.com/watch?v=YOUR_VIDEO_ID",
+            title: "Animation Reel",
+            description: "動態運鏡展示影片",
+          },
         ] as MediaItem[],
       },
       {
@@ -146,7 +146,8 @@ const Green: React.FC<GreenProps> = ({ onBack }) => {
               type: "image",
               src: project.img,
               title: project.title,
-              description: "原先為測試BONE的角色\n後續演變成場景中標誌性角色",
+              description:
+                "前身為早期學習建模的人體模型\n後續也開始擔當各種技術測試的常客\n最終成為個人標誌性角色",
             })
           }
           className="w-full md:w-2/3 bg-neutral-200/60 rounded-2xl overflow-hidden border border-neutral-300/60 shadow-sm cursor-zoom-in  "

@@ -19,7 +19,7 @@ const Personal: React.FC<PersonalProps> = ({ onBack }) => {
   const [activeMedia, setActiveMedia] = useState<MediaItem | null>(null);
 
   const project = {
-    title: "K U A N",
+    title: "LOGO",
     date: "2025.04 ~ ",
     // img: "portfolio_img/Personal/Personal_01.jpeg",
     img: "/KUAN_LOGO.webp",
@@ -72,7 +72,9 @@ const Personal: React.FC<PersonalProps> = ({ onBack }) => {
               type: "image",
               src: project.img,
               title: project.title,
-              description: "名稱取自個人姓氏音節\n常常被稱為K或Kさん",
+              // description: "名稱取自個人姓氏音節\n常常被稱為K或Kさん",
+              description:
+                "於2025年初設計的LOGO視覺標誌\n以圖文結合的臉部為主題\n嘗試在叛逆與可愛風格中平衡",
             })
           }
           className="w-full md:w-2/3 bg-neutral-200/60 rounded-2xl overflow-hidden border border-neutral-300/60 shadow-sm cursor-zoom-in whitespace-pre-line"

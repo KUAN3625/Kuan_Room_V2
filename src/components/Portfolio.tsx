@@ -30,7 +30,7 @@ const projects: Project[] = [
   },
   {
     id: 2,
-    title: "Green",
+    title: "GREEN",
     slug: "green",
     category: ["3D"],
     date: "2025.09 ~ ",
