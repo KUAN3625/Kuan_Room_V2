@@ -65,7 +65,7 @@ const Green: React.FC<GreenProps> = ({ onBack }) => {
             type: "image",
             src: "/portfolio_img/Green/Green_11.jpeg",
             title: "V1.5 ： 模型展示",
-            description: "後續更新的V1.5模型,",
+            description: "後續更新的V1.5模型",
           },
           {
             type: "image",
